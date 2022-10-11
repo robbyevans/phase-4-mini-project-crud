@@ -16,6 +16,11 @@ function SpiceItem({ spice, onUpdateSpice, onDeleteSpice }) {
       .then(onUpdateSpice);
   }
 
+  // function handleBook() {
+  //   fetch(`/event/${id}`, {
+  //     method: "POST",
+  //   }).then((r)=>r.json)
+
   function handleDeleteSpice() {
     fetch(`/spices/${id}`, {
       method: "DELETE",
@@ -33,14 +38,15 @@ function SpiceItem({ spice, onUpdateSpice, onDeleteSpice }) {
         <h2>{title}</h2>
         <p>{description}</p>
         <p>
-          Tasting Notes: <em>{notes}</em>
+          Location: <em>{notes}</em>
         </p>
         <div>
           Rating:{" "}
           <StarRating percentage={rating / 5} onClick={handleUpdateRating} />
         </div>
         <p>
-          <button onClick={handleDeleteSpice}>Delete Spice</button>
+        {/* <button onClick={}>RSVP Event</button> */}
+          <button onClick={handleDeleteSpice}>Delete Event</button>
         </p>
       </div>
     </div>

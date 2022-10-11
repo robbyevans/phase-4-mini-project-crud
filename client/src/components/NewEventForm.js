@@ -36,7 +36,7 @@ function NewSpiceForm({ onAddSpice }) {
 
   return (
     <div className="card">
-      <h2>New Spice</h2>
+      <h2>Add Event/Activity</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title: </label>
         <input
@@ -45,24 +45,24 @@ function NewSpiceForm({ onAddSpice }) {
           value={formData.title}
           onChange={handleChange}
         />
+          <label htmlFor="description">Description: </label>
+          <textarea
+            id="description"
+            value={formData.description}
+            onChange={handleChange}
+          />
+      <label htmlFor="notes">Location: </label>
+      <input
+        type="text"
+        id="notes"
+        value={formData.notes}
+        onChange={handleChange}
+      />
         <label htmlFor="image">Image URL: </label>
         <input
           type="text"
           id="image"
           value={formData.image}
-          onChange={handleChange}
-        />
-        <label htmlFor="notes">Tasting Notes: </label>
-        <input
-          type="text"
-          id="notes"
-          value={formData.notes}
-          onChange={handleChange}
-        />
-        <label htmlFor="description">Description: </label>
-        <textarea
-          id="description"
-          value={formData.description}
           onChange={handleChange}
         />
         <label htmlFor="rating">Rating: </label>
